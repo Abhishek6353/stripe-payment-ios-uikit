@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
+        
     }
-
-
+    
+    
+    //MARK: - Actions
+    @IBAction func btnDonate10Tapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func btnDonate20Tapped(_ sender: UIButton) {
+        
+    }
 }
-

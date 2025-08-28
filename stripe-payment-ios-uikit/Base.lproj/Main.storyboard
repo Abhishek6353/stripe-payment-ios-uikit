@@ -1,24 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stripe_payment_ios_uikit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-c3-ohd">
+                                <rect key="frame" x="0.0" y="59" width="393" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GiveBack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="584-Sa-Vet">
+                                        <rect key="frame" x="30" y="0.0" width="333" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="584-Sa-Vet" firstAttribute="leading" secondItem="mzb-c3-ohd" secondAttribute="leading" constant="30" id="Ssm-9P-5xI"/>
+                                    <constraint firstAttribute="height" constant="52" id="ZbI-An-yM6"/>
+                                    <constraint firstItem="584-Sa-Vet" firstAttribute="top" secondItem="mzb-c3-ohd" secondAttribute="top" id="elS-ee-cor"/>
+                                    <constraint firstAttribute="bottom" secondItem="584-Sa-Vet" secondAttribute="bottom" id="h8F-b3-9RH"/>
+                                    <constraint firstAttribute="trailing" secondItem="584-Sa-Vet" secondAttribute="trailing" constant="30" id="xAq-Ux-yDK"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgSample" translatesAutoresizingMaskIntoConstraints="NO" id="rWI-L3-W1Q">
+                                <rect key="frame" x="0.0" y="111" width="393" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="WPS-cX-7eg"/>
+                                    <constraint firstAttribute="width" constant="393" id="eOi-BX-cda"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give Back to the Society" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuQ-ex-FlN">
+                                <rect key="frame" x="15" y="631" width="363" height="26.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-Pl-bH7">
+                                <rect key="frame" x="30" y="677.33333333333337" width="333" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDc-Dp-UgG">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="40"/>
+                                        <color key="tintColor" red="0.19215686269999999" green="0.59999999999999998" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Donate $10">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnDonate10Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dK4-3x-wdD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzr-0w-vQm">
+                                        <rect key="frame" x="212" y="0.0" width="121" height="40"/>
+                                        <color key="tintColor" red="0.19215686269999999" green="0.59999999999999998" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Donate $20">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnDonate20Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1n-zm-hHt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iNv-9m-YtA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AuQ-ex-FlN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="29d-hu-Gx0"/>
+                            <constraint firstItem="BiT-Pl-bH7" firstAttribute="top" secondItem="AuQ-ex-FlN" secondAttribute="bottom" constant="20" id="2r9-hJ-Qwj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BiT-Pl-bH7" secondAttribute="trailing" constant="30" id="76K-vO-ys2"/>
+                            <constraint firstItem="rWI-L3-W1Q" firstAttribute="top" secondItem="mzb-c3-ohd" secondAttribute="bottom" id="GcR-NB-gux"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AuQ-ex-FlN" secondAttribute="trailing" constant="15" id="I2P-B1-gGD"/>
+                            <constraint firstItem="AuQ-ex-FlN" firstAttribute="top" secondItem="rWI-L3-W1Q" secondAttribute="bottom" constant="40" id="PfU-GE-he5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWI-L3-W1Q" secondAttribute="trailing" id="RLj-Ha-IYc"/>
+                            <constraint firstItem="rWI-L3-W1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fE4-dH-ycw"/>
+                            <constraint firstItem="BiT-Pl-bH7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kpb-Ie-ec0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mzb-c3-ohd" secondAttribute="trailing" id="mTe-Ug-DIy"/>
+                            <constraint firstItem="mzb-c3-ohd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tKF-Gh-lLt"/>
+                            <constraint firstItem="mzb-c3-ohd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="whU-BJ-u0t"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imgSample" width="390" height="480"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
