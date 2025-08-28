@@ -81,11 +81,35 @@ class ViewController: UIViewController {
             switch paymentResult {
             case .completed:
                 print("✅ Payment success")
+                self.showAlert(
+                    title: "🌟 Thank You!",
+                    message: "Your generous donation helps us continue our mission. We truly appreciate your support 🙏"
+                )
+                
             case .canceled:
                 print("❌ Payment canceled")
+                self.showAlert(
+                    title: "Payment Canceled",
+                    message: "You canceled the payment process."
+                )
+                
             case .failed(let error):
-                print("⚠️ Payment failed: \(error)")
+                print("⚠️ Payment failed: \(error.localizedDescription)")
+                self.showAlert(
+                    title: "Payment Error",
+                    message: error.localizedDescription
+                )
             }
         }
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
