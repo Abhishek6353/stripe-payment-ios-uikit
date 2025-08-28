@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		180ADE132E6081D800634005 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 180ADE122E6081D800634005 /* Stripe */; };
+		189765BE2E6077AC00C65CE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 189765BD2E6077AC00C65CE0 /* Alamofire */; };
+		18FDEC282E6072AD00D7242E /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 18FDEC272E6072AD00D7242E /* StripePaymentSheet */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1863DDDB2E6057590073FDA9 /* stripe-payment-ios-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stripe-payment-ios-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FDEC282E6072AD00D7242E /* StripePaymentSheet in Frameworks */,
+				189765BE2E6077AC00C65CE0 /* Alamofire in Frameworks */,
+				180ADE132E6081D800634005 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				1863DDDD2E6057590073FDA9 /* stripe-payment-ios-uikit */,
+				18FDEC262E6072AD00D7242E /* Frameworks */,
 				1863DDDC2E6057590073FDA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +66,13 @@
 				1863DDDB2E6057590073FDA9 /* stripe-payment-ios-uikit.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		18FDEC262E6072AD00D7242E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +95,9 @@
 			);
 			name = "stripe-payment-ios-uikit";
 			packageProductDependencies = (
+				18FDEC272E6072AD00D7242E /* StripePaymentSheet */,
+				189765BD2E6077AC00C65CE0 /* Alamofire */,
+				180ADE122E6081D800634005 /* Stripe */,
 			);
 			productName = "stripe-payment-ios-uikit";
 			productReference = 1863DDDB2E6057590073FDA9 /* stripe-payment-ios-uikit.app */;
@@ -107,6 +127,10 @@
 			);
 			mainGroup = 1863DDD22E6057590073FDA9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18FDEC252E606F0900D7242E /* XCRemoteSwiftPackageReference "stripe-ios" */,
+				189765BC2E6077AC00C65CE0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1863DDDC2E6057590073FDA9 /* Products */;
 			projectDirPath = "";
@@ -335,6 +359,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		189765BC2E6077AC00C65CE0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		18FDEC252E606F0900D7242E /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.22.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		180ADE122E6081D800634005 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FDEC252E606F0900D7242E /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+		189765BD2E6077AC00C65CE0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 189765BC2E6077AC00C65CE0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		18FDEC272E6072AD00D7242E /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FDEC252E606F0900D7242E /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePaymentSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1863DDD32E6057590073FDA9 /* Project object */;
 }

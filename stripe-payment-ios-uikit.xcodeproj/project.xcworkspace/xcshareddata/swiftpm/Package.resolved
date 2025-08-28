@@ -1,0 +1,24 @@
+{
+  "originHash" : "489a6fbc8231c556e9c2458deeaf415df99223975d93af6d2677d62a6bc2ac18",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
+        "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "stripe-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stripe/stripe-ios",
+      "state" : {
+        "revision" : "9007a14f582f4c14c0f456879a4f0a8fb72d28fc",
+        "version" : "24.22.0"
+      }
+    }
+  ],
+  "version" : 3
+}

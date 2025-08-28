@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Stripe
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        STPAPIClient.shared.publishableKey = "pk_test_51S0zOKRzm0VBjmt3ermuBLTTNMNLuKD7CdIiET6sc0JtHyDW90JAVa2xOfrAy9KqwLn69Dfz7gBCAkZsKmsrvEqF00COWpWyma"
         return true
     }
 
